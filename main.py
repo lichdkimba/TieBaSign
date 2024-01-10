@@ -222,7 +222,10 @@ def main():
         favorites = get_favorite(i)
         for j in favorites:
             time.sleep(0.125)
-            client_sign(i, tbs, j["id"], j["name"])
+            try:
+                client_sign(i, tbs, j["id"], j["name"])
+            except Exception as e:
+                logger.info(str(e))
         logger.info("完成第" + str(n) + "个用户签到")
     #send_email(favorites)
     logger.info("所有用户签到结束")
