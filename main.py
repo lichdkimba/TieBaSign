@@ -227,7 +227,7 @@ def main():
             except Exception as e:
                 logger.info(str(e))
         logger.info("完成第" + str(n) + "个用户签到")
-    #send_email(favorites)
+    ##send_email(favorites)
     logger.info("所有用户签到结束")
 
 
